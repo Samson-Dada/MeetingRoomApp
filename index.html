@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meeting Room App</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Meeting Room App</h1>
+    </header>
+
+    <div class="container">
+      <div class="registration-form">
+        <h2>User Registration</h2>
+        <!-- Add your registration form elements here -->
+        <button class="btn__register">Register</button>
+        <button class="btn__login">Login</button>
+      </div>
+
+      <div class="room-list" id="roomList" style="display: none">
+        <!-- Room details will be dynamically populated here -->
+      </div>
+
+      <div class="booking-form" id="bookingForm" style="display: none">
+        <h2>Book a Room</h2>
+        <select id="roomDropdown">
+          <!-- Room options will be dynamically populated here -->
+        </select>
+        <input type="datetime-local" id="datetime" required />
+        <button class="btn__bookRoom" id="btn__bookRoom">Book Room</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <p id="modal-text"></p>
+        <button class="close-btn" id="btn__closeModal">Close</button>
+        <!-- <button class="close-btn" id="btn__closeModal" onclick="closeModal()">Close</button> -->
+      </div>
+    </div>
+
+    <div class="" id="notification__container">
+      <div class="modal-content">
+        <p id="notification__text">test</p>
+      </div>
+    </div>
+
+    <form class="form__modal" id="form__modal">
+      <div class="form__modal-content">
+        <p id="modal-text"></p>
+        <input type="text" name="" id="form__username" placeholder="Enter email or username" />
+        <input type="password" name="" id="form__password" placeholder="Password" />
+        <input type="password" name="" id="form__confirmPassword" placeholder="Confirm Password" />
+        <button class="" id="btn__submitForm">Submit</button>
+        <!-- <button class="close-btn" id="btn__closeModal">Close</button> -->
+      </div>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
