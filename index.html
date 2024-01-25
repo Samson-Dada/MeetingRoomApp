@@ -8,22 +8,22 @@
   </head>
   <body>
     <header>
-      <h1>Meeting Room App</h1>
+      <h1>Booking Meeting Room</h1>
     </header>
 
     <div class="container">
       <div class="registration-form">
-        <h2>User Registration</h2>
+        <h2>Registration or Login to Book Meeting Room</h2>
         <!-- Add your registration form elements here -->
-        <button class="btn__register">Register</button>
-        <button class="btn__login">Login</button>
+        <button id="btn__register">Register</button>
+        <button id="btn__login">Login</button>
       </div>
 
       <div class="room-list" id="roomList" style="display: none">
         <!-- Room details will be dynamically populated here -->
       </div>
 
-      <div class="booking-form" id="bookingForm" style="display: none">
+      <div class="booking-form" id="bookingForm">
         <h2>Book a Room</h2>
         <select id="roomDropdown">
           <!-- Room options will be dynamically populated here -->
@@ -47,16 +47,26 @@
       </div>
     </div>
 
-    <form class="form__modal" id="form__modal">
+    <!-- register new user -->
+    <form class="form__modal" id="form-register__modal">
       <div class="form__modal-content">
-        <p id="modal-text"></p>
-        <input type="text" name="" id="form__username" placeholder="Enter email or username" />
+        <p id="form-error-text"></p>
+        <input type="email" name="" id="form__email" placeholder="Enter email or username" />
+        <input type="text" name="" id="form__username" placeholder="Enter name" />
         <input type="password" name="" id="form__password" placeholder="Password" />
-        <input type="password" name="" id="form__confirmPassword" placeholder="Confirm Password" />
-        <button class="" id="btn__submitForm">Submit</button>
-        <!-- <button class="close-btn" id="btn__closeModal">Close</button> -->
+        <input type="password" name="" id="form-confirm__Password" placeholder="Confirm Password" />
+        <button id="btn__submitForm">Submit</button>
       </div>
     </form>
-    <script src="app.js"></script>
+
+    <!-- existing user -->
+    <form class="form-login__modal" id="form-login__modal">
+      <div class="form-login__modal-content">
+        <input type="email" name="" id="form__usernam" placeholder="Enter email or username" />
+        <input type="password" name="" id="form__password" placeholder="Password" />
+        <button class="" id="btn__login">Submit</button>
+      </div>
+    </form>
+    <script defer src="app.js"></script>
   </body>
 </html>
